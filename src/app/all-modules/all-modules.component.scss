@@ -1,0 +1,184 @@
+// //  <div *ngFor="let asideItems of menuItems.getAll()"><div class="pcoded-navigatio-lavel"
+
+
+.menu-container {
+    overflow: hidden;
+    /* Hide overflow to ensure smooth transitions */
+    transition: height 0.3s ease;
+    /* Smooth transition for height */
+}
+
+/* Ensure the container is initially hidden with zero height */
+.menu-container.collapsed {
+    height: 0;
+}
+
+/* Ensure the container has height when expanded */
+.menu-container.expanded {
+    height: auto;
+    /* Adjust based on content */
+}
+
+//  menu-title-theme="theme5"> {
+//          {
+//          asideItems.label
+//      }
+//  }
+
+//  </div><ul class="pcoded-item pcoded-left-item"
+//  item-border="none"
+//  item-border-style="solid"
+//  subitem-border="solid"
+//  *ngFor="let asideItem of asideItems.main"
+//  appAccordionLink>< !-- <ul class="pcoded-item pcoded-left-item"
+//  item-border="none"
+//  item-border-style="solid"
+//  subitem-border="solid"
+//  *ngFor="let asideItem of asideItems.main"
+//  appAccordionLink group="{{asideItem.state}}">-->< !-- <li [routerLinkActive]="['active']" *ngIf="asideItem.type === 'external'" appAccordionLink group="{{asideItem.state}}">--><li [routerLinkActive]="['active']"
+//  *ngIf="asideItem.type === 'external'"
+//  appAccordionLink><a target="{{asideItem.target ? '_blank' : '_self'}}"
+
+//  appAccordionToggle><span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span><span class="pcoded-mtext"> {
+//          {
+//          asideItem.name
+//      }
+//  }
+
+//  </span><span *ngFor="let asideBadge of asideItem.badge"
+
+//  class="pcoded-badge label label-{{ asideBadge.type }}"> {
+//          {
+//          asideBadge.value
+//      }
+//  }
+
+//  </span><span class="pcoded-mcaret"></span></a></li><li [routerLinkActive]="['active']"
+//  *ngIf="asideItem.type === 'link'"
+//  appAccordionLink>< !-- <li [routerLinkActive]="['active']"
+//  *ngIf="asideItem.type === 'link'"
+//  appAccordionLink group="{{asideItem.state}}">--><a [routerLink]="['/', asideItem.main_state, asideItem.state]"
+//  target="{{asideItem.target ? '_blank' : '_self'}}"
+
+//  appAccordionToggle *ngIf="asideItem.main_state; else: mainContent"><span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span><span class="pcoded-mtext"> {
+//          {
+//          asideItem.name
+//      }
+//  }
+
+//  </span><span *ngFor="let asideBadge of asideItem.badge"
+
+//  class="pcoded-badge label label-{{ asideBadge.type }}"> {
+//          {
+//          asideBadge.value
+//      }
+//  }
+
+//  </span><span class="pcoded-mcaret"></span></a><ng-template #mainContent><a [routerLink]="['/', asideItem.state]"
+//  target="{{asideItem.target ? '_blank' : '_self'}}"
+
+//  appAccordionToggle><span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span><span class="pcoded-mtext"> {
+//          {
+//          asideItem.name
+//      }
+//  }
+
+//  </span><span *ngFor="let asideBadge of asideItem.badge"
+
+//  class="pcoded-badge label label-{{ asideBadge.type }}"> {
+//          {
+//          asideBadge.value
+//      }
+//  }
+
+//  </span><span class="pcoded-mcaret"></span></a></ng-template></li><li [routerLinkActive]="['active']"
+//  *ngIf="asideItem.type === 'sub'"
+//  class="pcoded-hasmenu"
+//  (click)="toggleTrigger($event)"
+//  dropdown-icon="style1"
+//  subitem-icon="style6"
+//  appAccordionLink>< !-- <li [routerLinkActive]="['active']"
+//  *ngIf="asideItem.type === 'sub'"
+//  class="pcoded-hasmenu"
+//  dropdown-icon="style1"
+//  subitem-icon="style6"
+//  appAccordionLink group="{{asideItem.state}}">--><a [routerLinkActive]="['active']"
+//  href="javascript:;"
+
+//  appAccordionToggle><span class="pcoded-micon"><i class="{{ asideItem.icon }}"></i></span><span class="pcoded-mtext"> {
+//          {
+//          asideItem.name
+//      }
+//  }
+
+//  </span><span *ngFor="let asideBadge of asideItem.badge"
+
+//  class="pcoded-badge label label-{{ asideBadge.type }}"> {
+//          {
+//          asideBadge.value
+//      }
+//  }
+
+//  </span><span class="pcoded-mcaret"></span></a><ul class="pcoded-submenu"><ng-template ngFor let-asideChildren [ngForOf]="asideItem.children"><li [routerLinkActive]="['active']"
+//  *ngIf="asideChildren.type !== 'sub'"><a [routerLink]="['/', asideItem.state, asideChildren.state]"
+
+//  target="{{asideChildren.target ? '_blank' : '_self'}}"><span class="pcoded-micon"><i class="ti-angle-right"></i></span><span class="pcoded-mtext"> {
+//          {
+//          asideChildren.name
+//      }
+//  }
+
+//  </span>< !-- <span *ngFor="let asideChildrenBadge of asideChildren.badge"
+
+//  class="pcoded-badge label label-{{ asideChildrenBadge.type }}"> {
+//          {
+//          asideChildrenBadge.value
+//      }
+//  }
+
+//  </span>--><span class="pcoded-mcaret"></span></a></li><li [routerLinkActive]="['active']"
+//  class="pcoded-hasmenu"
+//  dropdown-icon="style1"
+//  subitem-icon="style6"
+//  *ngIf="asideChildren.type === 'sub'"
+//  appAccordionLink group="sub-toggled"><a href="javascript:;"
+
+//  appAccordionToggle><span class="pcoded-micon"><i class="ti-direction-alt"></i></span><span class="pcoded-mtext"> {
+//          {
+//          asideChildren.name
+//      }
+//  }
+
+//  </span>< !-- <span *ngFor="let asideChildrenBadge of asideChildren.badge"
+
+//  class="pcoded-badge label label-{{ asideChildrenBadge.type }}"> {
+//          {
+//          asideChildrenBadge.value
+//      }
+//  }
+
+//  </span>--><span class="pcoded-mcaret"></span></a><ul class="pcoded-submenu"><ng-template ngFor let-asideChildrenSub [ngForOf]="asideChildren.children"><li [routerLinkActive]="['active']"><a [routerLink]="['/', asideItem.state, asideChildren.state, asideChildrenSub.state]"
+
+//  target="{{asideChildrenSub.target ? '_blank' : '_self'}}"><span class="pcoded-micon"><i class="ti-angle-right"></i></span><span class="pcoded-mtext"> {
+//          {
+//          asideChildrenSub.name
+//      }
+//  }
+
+//  </span>< !--
+//  /*ngFor="let asideChildrenSubBadge of asideChildrenSub.badge" -->
+//                                                                     <!-- <span
+//                                                                             *ngFor="let asideChildrenSubBadge of asideChildrenSub['badge']"
+//                                                                             class="pcoded-badge label label-{{ asideChildrenSubBadge.type }}">{{asideChildrenSubBadge.value}}</span> -->
+//                                                                     <span
+//                                                                         class="pcoded-mcaret"></span>
+//                                                                 </a>
+//                                                             </li>
+//                                                         </ng-template>
+//                                                     </ul>
+//                                                 </li>
+//                                             </ng-template>
+//                                         </ul>
+//                                     </li>
+//                                 </ul>
+//                             </div>
