@@ -1046,7 +1046,7 @@
                                     <li [routerLinkActive]="['active']"
                                         *ngFor="let subHeader of menu.subHeaders">
                                         <a
-                                            [routerLink]="['/', subHeader.subHead.link]"
+                                            [routerLink]="subHeader.subHead.link"
                                             target="_self">
                                             <span class="pcoded-micon">
                                                 <img

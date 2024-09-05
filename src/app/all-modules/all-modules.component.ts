@@ -97,7 +97,7 @@ export class AllModulesComponent implements OnInit {
             "subHead": {
               "menuId": null,
               "icon": "assets/img/icon/dashboard.svg",
-              "link": "dashboard",
+              "link": 'dashboard',
               "name": "Dashboard",
               "imgUrl": null,
               "priority": 1,
@@ -112,7 +112,7 @@ export class AllModulesComponent implements OnInit {
             "subHead": {
               "menuId": null,
               "icon": "assets/img/icon/employee-dir.svg",
-              "link": "empList",
+              "link": 'book',
               "name": "Employee List",
               "imgUrl": null,
               "priority": 2,
